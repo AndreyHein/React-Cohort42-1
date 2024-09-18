@@ -1,6 +1,6 @@
 import "./styles.css";
 
-function Input({ name, type, placeholder, label }) {
+function Input({ name, type = "text", placeholder, label }) {
   return (
     <div className="input-wrapper">
       {label && <label>{label}</label>}
