@@ -1,0 +1,13 @@
+.page-wrapper {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-example-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 40px;
+  }
