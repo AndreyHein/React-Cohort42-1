@@ -1,11 +1,12 @@
 import "./styles.css";
 
-function Input({ name, type = "text", placeholder, label }) {
+function Input({ id, name, type = "text", placeholder, label }) {
   return (
     <div className="input-wrapper">
-      {label && <label>{label}</label>}
+      <label className="input-label" htmlFor={id}>{label}</label>
       <input
         className="input-component"
+        id={id}
         type={type}
         name={name}
         placeholder={placeholder}

@@ -1,44 +1,29 @@
-import "./styles.css";
-import Input from "../Input/Input";
 import Button from "../Button/Button";
+import Input from "../Input/Input";
 
-const email = {
-  name: "email",
-  type: "email",
-  placeholder: "Enter your email",
-  label: "Email",
-};
-
-const pass = {
-  name: "password",
-  type: "password",
-  placeholder: "Enter your password",
-  label: "Password",
-};
-
-const button = {
-  name: "Login",
-  type: "submit",
-};
+import "./styles.css";
 
 function LoginForm() {
   return (
-    <div className="login_form-wrapper">
-        <p className="title">Login form</p>
+    <form className="login-form-container">
+      <p className="title">Login form</p>
+      <div className="inputs-container">
         <Input
-          name={email.name}
-          type={email.type}
-          placeholder={email.placeholder}
-          label={email.label}
+          id="login-email"
+          label="Email"
+          placeholder="Enter your email"
+          name="email"
         />
         <Input
-          name={pass.name}
-          type={pass.type}
-          placeholder={pass.placeholder}
-          label={pass.label}
+          id="login-password"
+          label="Password"
+          placeholder="Enter your password"
+          name="password"
+          type="password"
         />
-      <Button name={button.name} type={button.type} />
-    </div>
+      </div>
+      <Button type="submit" name="Login" />
+    </form>
   );
 }
 

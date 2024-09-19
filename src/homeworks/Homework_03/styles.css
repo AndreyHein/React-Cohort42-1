@@ -1,5 +1,6 @@
-.homework03-wrapper {
+.page-wrapper {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex: 1;
 }
