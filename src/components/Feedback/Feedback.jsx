@@ -7,40 +7,40 @@ function Feedback() {
   const [countY, setCountY] = useState(0);
   const [countN, setCountN] = useState(0);
 
-  const like = () => {
+  const countLike = () => {
     setCountY((prevValue) => {
       return prevValue + 1;
     });
   };
 
-  const dislike = () => {
+  const countDislike = () => {
     setCountN((prevValue) => {
       return prevValue + 1;
     });
   };
 
-  const onNull = () => {
-    setCountY(0);
-    setCountN(0);
+  const resetResult = () => {
+    countLike(0);
+    countDislike(0);
   };
 
   return (
     <div className="feedback-wrapper">
       <div className="button-wraper">
         <div className="button-control">
-          <Button name="Like" onClick={like} />
+          <Button name="Like" onClick={countLike} />
         </div>
         <p className="count">{countY}</p>
       </div>
       <div className="button-wraper">
         <div className="button-control">
-          <Button name="Dislike" onClick={dislike} />
+          <Button name="Dislike" onClick={countDislike} />
         </div>
         <p className="count">{countN}</p>
       </div>
       <div className="button-wraper">
         <div className="button-control">
-          <Button name="Reset Result" onClick={onNull} />
+          <Button name="Reset Result" onClick={resetResult} />
         </div>
       </div>
     </div>
