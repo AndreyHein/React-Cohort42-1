@@ -4,39 +4,39 @@ import "./styles.css";
 import Button from "../../components/Button/Button";
 
 function Feedback() {
-  const [countY, setCountY] = useState(0);
-  const [countN, setCountN] = useState(0);
+  const [countLike, setCountLike] = useState(0);
+  const [countDislike, setCountDislike] = useState(0);
 
-  const countLike = () => {
-    setCountY((prevValue) => {
+  const onLike = () => {
+    setCountLike((prevValue) => {
       return prevValue + 1;
     });
   };
 
-  const countDislike = () => {
-    setCountN((prevValue) => {
+  const onDislike = () => {
+    setCountDislike((prevValue) => {
       return prevValue + 1;
     });
   };
 
   const resetResult = () => {
-    countLike(0);
-    countDislike(0);
+    setCountLike(0);
+    setCountDislike(0);
   };
 
   return (
     <div className="feedback-wrapper">
       <div className="button-wraper">
         <div className="button-control">
-          <Button name="Like" onClick={countLike} />
+          <Button name="Like" onClick={onLike} />
         </div>
-        <p className="count">{countY}</p>
+        <p className="count">{countLike}</p>
       </div>
       <div className="button-wraper">
         <div className="button-control">
-          <Button name="Dislike" onClick={countDislike} />
+          <Button name="Dislike" onClick={onDislike} />
         </div>
-        <p className="count">{countN}</p>
+        <p className="count">{countDislike}</p>
       </div>
       <div className="button-wraper">
         <div className="button-control">
